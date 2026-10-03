@@ -1,0 +1,9 @@
+services:
+  finpay:
+    build: .
+    ports: ["3000:3000"]
+    env_file: .env
+    volumes:
+      - finpay-data:/app/prisma
+volumes:
+  finpay-data:
